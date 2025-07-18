@@ -1,7 +1,6 @@
 'use client'
 
 import { ModeToggle } from "../components/theme-toggle";
-import Footer from "../components/Footer";
 import OnekoCat from "../components/OnekoCat";
 import Reach from "../components/Reach";
 import Experience from "../components/Experience";
@@ -35,11 +34,11 @@ export default function Home() {
           <div className="flex items-center gap-6 mb-4">
             <div>
               <h1 className={`text-3xl md:text-4xl font-medium gap-2 dark:text-neutral-200 ${geistMono.className}`}>
-                Sushil Pandet
+                Sushil Pandey
               </h1>
               <div className="flex items-center gap-2 mt-2">
                 <p className="text-sm md:text-md text-neutral-600 dark:text-neutral-400">
-                  developer <span className="mx-1">• engineer</span>
+                  backend developer <span className="mx-1">• GSoC'25 @OpenAFS</span>
                 </p>
               </div>
             </div>
@@ -47,23 +46,26 @@ export default function Home() {
 
           <div className="mt-5 space-y-4">
             <p className="text-base md:text-lg text-neutral-800 dark:text-neutral-200">
-              <span className="text-cyan-500 dark:text-cyan-400">*</span> passionate about building <span className="text-cyan-500 dark:text-cyan-400">scalable solutions</span> that make a difference. crafting <span className="text-cyan-500 dark:text-cyan-400">web applications</span> and <span className="text-cyan-500 dark:text-cyan-400">mobile experiences</span> with a focus on <span className="text-cyan-500 dark:text-cyan-400">performance</span> and modern architecture.
+              <span className="text-cyan-500 dark:text-cyan-400">*</span> passionate about <span className="text-cyan-500 dark:text-cyan-400">low-level kernel development</span> and <span className="text-cyan-500 dark:text-cyan-400">distributed systems</span>. currently working on <span className="text-cyan-500 dark:text-cyan-400">OpenAFS kernels</span> through GSoC 2025. i honestly suck at frontend, but give me the right <span className="text-cyan-500 dark:text-cyan-400">mood or deadline</span> and i'll craft any platform.
             </p>
 
             <div className="flex flex-wrap gap-2 mt-2">
               <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
-                full-stack
+                backend
               </span>
               <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
-                cloud
+                kernels
               </span>
               <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
-                devops
+                systems
+              </span>
+              <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
+                GSoC
               </span>
             </div>
 
             <a
-              href="/sushil-pandet-resume.pdf"
+              href="/sushil-pandey-resume.pdf"
               className="inline-flex items-center justify-center px-3 py-2 bg-neutral-100 dark:bg-neutral-800/30 text-neutral-800 dark:text-neutral-200 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700/50 transition-colors font-medium"
               target="_blank"
               rel="noopener noreferrer"
@@ -74,7 +76,7 @@ export default function Home() {
             </a>
 
             <Link
-              href={'<https://cal.com/sushil-pandet/30min>'}
+              href={'https://cal.com/sushil-pandey/30min'}
               target="_blank"
               className={`pl-4 text-lg md:text-xl hover:underline ${geistMono.className}`}
             >
@@ -107,8 +109,6 @@ export default function Home() {
           <h2 className="text-xl md:text-2xl font-medium mb-4">Connect</h2>
           <Reach />
         </div>
-
-        <Footer />
       </div>
     </div>
   );

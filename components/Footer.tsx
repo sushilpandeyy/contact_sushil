@@ -1,10 +1,12 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer className="w-full py-6">
-      <div className="flex flex-col items-start space-y-1">
-        <p className="text-md text-neutral-600 dark:text-neutral-400 font-light">
-          © {new Date().getFullYear()} Sushil Pandet
-        </p>
+    <footer className="w-full py-12 mt-16">
+      <div className="max-w-3xl mx-auto px-6 md:px-12">
+        <div className="text-sm text-neutral-500 dark:text-neutral-400">
+          <p>© {currentYear} Sushil Pandey</p>
+        </div>
       </div>
     </footer>
   );

@@ -2,77 +2,89 @@ import { Project } from '../types/project';
 
 export const projects: Project[] = [
   {
-    id: 'cloudops-dashboard',
-    title: "CloudOps Dashboard",
-    description: "A comprehensive cloud infrastructure monitoring and management platform built with React and Node.js. Features real-time metrics, automated scaling recommendations, and multi-cloud support for AWS, Azure, and GCP. The dashboard provides intuitive visualizations for resource utilization, cost optimization, and performance monitoring, helping teams manage their cloud infrastructure efficiently.",
-    liveLink: "<https://cloudops-dashboard.vercel.app/>",
-    githubLink: "<https://github.com/sushilpandet/cloudops-dashboard>",
-    image: '/images/cloudops-dashboard.png',
-    video: "/videos/cloudops-demo.mp4",
+    id: 'korosuke',
+    title: "Korosuke - Security-Preserving Retrieval Framework",
+    description: "A novel framework that reimagines security-preserving retrieval in enterprise systems, earning a Gold Medal for research innovation. Developed hierarchical security-aware embeddings that mathematically enforce access control during semantic search, implementing the solution in Python. Pioneered an adaptive re-ranking mechanism that optimizes the relevance-security tradeoff through a novel information utility function for enterprise knowledge systems.",
+    githubLink: "https://github.com/sushilpandeyy/korosuke",
+    image: '/images/korosuke.png',
     tags: [
-      "React",
-      "Node.js",
-      "TypeScript",
-      "AWS",
-      "Docker",
-      "Kubernetes",
-      "Chart.js",
-      "Tailwind CSS"
+      "Python",
+      "Machine Learning",
+      "Security",
+      "Enterprise Systems",
+      "Semantic Search",
+      "Access Control",
+      "Research"
     ],
   },
   {
-    id: 'ecommerce-platform',
-    title: "Modern E-commerce Platform",
-    description: "A full-stack e-commerce solution with advanced features including inventory management, payment processing, and analytics. Built with Next.js and PostgreSQL, it supports multi-vendor capabilities, real-time notifications, and seamless mobile experience. The platform integrates with Stripe for payments and implements robust security measures for user data protection.",
-    liveLink: "<https://ecommerce-platform-sp.vercel.app/>",
-    githubLink: "<https://github.com/sushilpandet/ecommerce-platform>",
-    image: '/images/ecommerce-platform.png',
-    tags: [
-      "Next.js",
-      "PostgreSQL",
-      "Prisma",
-      "TypeScript",
-      "Stripe",
-      "Redis",
-      "Tailwind CSS"
-    ],
-  },
-  {
-    id: 'chat-application',
-    title: "Real-time Chat Application",
-    description: "A feature-rich chat application with real-time messaging, file sharing, and video calling capabilities. Built using Socket.io for real-time communication, MongoDB for data persistence, and React for the frontend. Supports group chats, message encryption, and user presence indicators, providing a seamless communication experience.",
-    liveLink: "<https://chat-app-sp.vercel.app/>",
-    githubLink: "<https://github.com/sushilpandet/chat-application>",
-    image: '/images/chat-app.png',
-    tags: [
-      "React",
-      "Socket.io",
-      "MongoDB",
-      "Express.js",
-      "WebRTC",
-      "JWT",
-      "Material-UI"
-    ],
-  },
-  {
-    id: 'analytics-dashboard',
-    title: "Business Analytics Dashboard",
-    description: "An advanced analytics platform that transforms raw business data into actionable insights. Features interactive charts, predictive analytics, and customizable reporting. Built with React and Python backend, it integrates with various data sources and provides real-time data visualization, helping businesses make data-driven decisions.",
-    liveLink: "<https://analytics-dashboard-sp.vercel.app/>",
-    githubLink: "<https://github.com/sushilpandet/analytics-dashboard>",
-    image: '/images/analytics-dashboard.png',
+    id: 'nyxapi',
+    title: "NyxAPI - Mock API Generator",
+    description: "A flexible tool that lets developers launch mock APIs instantly. Developed a real-time endpoint builder using React on the frontend and Python-based server on the backend, enabling dynamic API generation and updates. Structured the underlying PostgreSQL database to organize API schemas, route configurations, and collaborative access controls efficiently.",
+    liveLink: "https://nyxapi.dev",
+    githubLink: "https://github.com/sushilpandeyy/nyxapi",
+    image: '/images/nyxapi.png',
     tags: [
       "React",
       "Python",
-      "FastAPI",
       "PostgreSQL",
-      "D3.js",
-      "Pandas",
-      "Docker"
+      "API Development",
+      "Real-time",
+      "Backend",
+      "Developer Tools"
+    ],
+  },
+  {
+    id: 'curlbaby',
+    title: "cUrlBaby - CLI API Suite",
+    description: "A lightweight Java-based terminal utility for API testing that replicates core Postman features through a command-line interface, following object-oriented patterns for modular architecture. Implemented comprehensive HTTP operation support (GET, POST, PUT, DELETE) with built-in timeout control, error handling, and a custom JSON parser to format API responses clearly in the console.",
+    githubLink: "https://github.com/sushilpandeyy/curlbaby",
+    image: '/images/curlbaby.png',
+    tags: [
+      "Java",
+      "CLI",
+      "HTTP",
+      "API Testing",
+      "JSON Parser",
+      "Developer Tools",
+      "Terminal"
+    ],
+  },
+  {
+    id: 'qliq',
+    title: "QliQ - Web3 Advertising Network",
+    description: "Built a decentralized ad ecosystem that uses NFT metadata to deliver targeted promotions, utilizing React, Tailwind CSS, and Express.js. Wrote smart contracts in Solidity and integrated with ThirdWeb; utilized IPFS for distributed content hosting. A revolutionary approach to digital advertising through blockchain technology.",
+    githubLink: "https://github.com/sushilpandeyy/qliq",
+    image: '/images/qliq.png',
+    tags: [
+      "React",
+      "Solidity",
+      "Web3",
+      "NFT",
+      "IPFS",
+      "ThirdWeb",
+      "Blockchain",
+      "Tailwind CSS"
+    ],
+  },
+  {
+    id: 'flochealth',
+    title: "FlocHealth - Healthcare & Insurance System",
+    description: "A complete healthcare and insurance system built from scratch, developing both frontend and backend components using Python-based technologies. Engineered robust Python backend with Tornado framework, implementing disease prediction algorithms and personalized insurance policy recommendation engines. Deployed on AWS EC2 with Neo4J and MySQL databases, serving 10,000+ users.",
+    image: '/images/flochealth.png',
+    tags: [
+      "Python",
+      "Tornado",
+      "AWS EC2",
+      "Neo4J",
+      "MySQL",
+      "Healthcare",
+      "Machine Learning",
+      "Insurance"
     ],
   },
 ];
 
 export const getProjectById = (id: string): Project | undefined => {
   return projects.find(project => project.id === id);
-};
+}

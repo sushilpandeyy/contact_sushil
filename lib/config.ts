@@ -1,31 +1,34 @@
 // lib/config.ts
 export const siteConfig = {
-  name: 'Your Name',
-  title: 'Your Name - Full Stack Developer',
-  description: 'Full-stack developer crafting digital experiences with clean code and modern design.',
-  url: 'https://yourname.dev',
-  author: 'Your Name',
-  email: 'your.email@example.com',
-  phone: '+1 (555) 123-4567',
-  location: 'San Francisco, CA',
+  name: 'Sushil Pandey',
+  title: 'Sushil Pandey - Backend Developer',
+  description: 'Backend Developer specializing in low-level kernels via GSoC\'25 @OpenAFS. Frontend isn\'t my forte, but give me the right mood or deadline and I\'ll craft any platform.',
+  url: 'https://sushilpandey.dev',
+  author: 'Sushil Pandey',
+  email: 'contact.sushilpandeyy@gmail.com',
+  phone: '+91 8545066691',
+  location: 'Andhra Pradesh, India',
   social: {
-    github: 'https://github.com/yourusername',
-    linkedin: 'https://linkedin.com/in/yourprofile',
-    twitter: 'https://twitter.com/yourhandle',
-    instagram: 'https://instagram.com/yourhandle',
+    github: 'https://github.com/sushilpandeyy',
+    linkedin: 'https://linkedin.com/in/contactsushil',
+    twitter: 'https://twitter.com/sushilpandeyy',
+    instagram: 'https://instagram.com/sushilpandeyy',
+    blog: 'https://blog.contactsushil.me',
+    website: 'https://contactsushil.me'
   },
   keywords: [
     'portfolio',
-    'developer',
+    'backend developer',
+    'systems programming',
+    'low-level kernels',
+    'OpenAFS',
+    'GSoC',
     'full-stack',
-    'react',
-    'nextjs',
-    'typescript',
-    'javascript',
     'web development',
-    'ui/ux',
-    'frontend',
-    'backend',
+    'software engineering',
+    'kernel development',
+    'distributed systems',
+    'performance optimization'
   ],
   navItems: [
     { id: 'about', label: 'About', href: '#about' },
@@ -36,6 +39,7 @@ export const siteConfig = {
 }
 
 export const metadataConfig = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
@@ -53,7 +57,7 @@ export const metadataConfig = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.url}/og-image.jpg`,
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: siteConfig.name,
@@ -64,8 +68,8 @@ export const metadataConfig = {
     card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og-image.jpg`],
-    creator: '@yourhandle',
+    images: ['/og-image.jpg'],
+    creator: '@sushilpandeyy',
   },
   icons: {
     icon: '/favicon.ico',
