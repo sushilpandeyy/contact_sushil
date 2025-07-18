@@ -4,6 +4,7 @@ import { ProjectCard } from '../components/ProjectCard';
 import Link from 'next/link';
 import { ModeToggle } from '../components/theme-toggle';
 import { Project } from '../types/project';
+import Reach from './Reach';
 
 interface ProjectsListClientProps {
   projects: Project[];
@@ -36,6 +37,7 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
             ))}
           </div>
         </div>
+        <Reach/>
       </div>
     </div>
   );

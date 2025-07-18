@@ -19,5 +19,7 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
-  return <ProjectsListClient projects={projects} />;
+  return <>
+  <ProjectsListClient projects={projects} />;
+  </>
 }

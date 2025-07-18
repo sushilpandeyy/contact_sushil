@@ -11,18 +11,18 @@ const inter = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sushilpandey.dev'),
+  metadataBase: new URL('https://contactsushil.me'),
   title: 'Sushil Pandey - Backend Developer',
   description: 'Backend Developer specializing in low-level kernels via GSoC\'25 @OpenAFS. Frontend isn\'t my forte, but give me the right mood or deadline and I\'ll craft any platform.',
   openGraph: {
-    url: 'https://sushilpandey.dev',
+    url: 'https://contactsushil.me',
     siteName: 'Sushil Pandey Portfolio',
     locale: 'en_US',
     type: 'website',
     title: 'Sushil Pandey - Backend Developer',
     description: 'Backend Developer specializing in low-level kernels via GSoC\'25 @OpenAFS. Frontend isn\'t my forte, but give me the right mood or deadline and I\'ll craft any platform.',
     images: [{
-      url: '/open-graph.png',
+      url: '/logo/sushil_git.jpeg',
       width: 1200,
       height: 630,
       alt: 'Sushil Pandey - Backend Developer'
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: 'Sushil Pandey - Backend Developer',
     description: 'Backend Developer specializing in low-level kernels via GSoC\'25 @OpenAFS. Frontend isn\'t my forte, but give me the right mood or deadline and I\'ll craft any platform.',
     creator: '@sushilpandeyy',
-    images: ['/open-graph.png'],
+    images: ['/logo/sushil_git.jpeg'],
   },
   keywords: [
     'backend developer',

@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import { ProjectCard } from '../../../components/ProjectCard';
 import { ModeToggle } from '../../../components/theme-toggle';
 import Link from 'next/link';
+import Reach from 'components/Reach';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -60,6 +61,7 @@ export default async function ProjectPage({ params }: Props) {
           </Link>
           <ProjectCard project={project} isDetailed />
         </div>
+        <Reach/>
       </div>
     </div>
   );

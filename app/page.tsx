@@ -22,7 +22,7 @@ export default function Home() {
           <Link href={"/projects"} className="text-md md:text-lg hover:underline">
             projects
           </Link>
-          <Link href={"/blogs"} className="text-md md:text-lg hover:underline">
+          <Link href={"https://medium.com/@contactsushil"} className="text-md md:text-lg hover:underline">
             blogs
           </Link>
           <ModeToggle />
