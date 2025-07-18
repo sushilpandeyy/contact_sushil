@@ -2,7 +2,6 @@ import { getProjectById } from '../../../data/projects';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { ProjectCard } from '../../../components/ProjectCard';
-import OnekoCat from '../../../components/OnekoCat';
 import { ModeToggle } from '../../../components/theme-toggle';
 import Link from 'next/link';
 
@@ -47,7 +46,6 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <div className="min-h-screen">
-      <OnekoCat />
       <div className="flex flex-col items-start px-6 md:px-12 lg:ml-100 pt-4 md:pt-6 space-y-8 md:space-y-12 max-w-3xl mx-auto">
         <div className="w-full flex justify-end items-center">
           <ModeToggle />

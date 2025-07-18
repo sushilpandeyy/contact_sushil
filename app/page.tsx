@@ -1,7 +1,6 @@
 'use client'
 
 import { ModeToggle } from "../components/theme-toggle";
-import OnekoCat from "../components/OnekoCat";
 import Reach from "../components/Reach";
 import Experience from "../components/Experience";
 import Link from "next/link";
@@ -18,7 +17,6 @@ const geistMono = Geist({
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <OnekoCat />
       <div className="flex flex-col items-start px-6 md:px-12 pt-4 md:pt-6 space-y-8 md:space-y-12 max-w-3xl w-full mx-auto">
         <div className="w-full flex justify-end items-center gap-4">
           <Link href={"/projects"} className="text-md md:text-lg hover:underline">
@@ -38,7 +36,7 @@ export default function Home() {
               </h1>
               <div className="flex items-center gap-2 mt-2">
                 <p className="text-sm md:text-md text-neutral-600 dark:text-neutral-400">
-                  backend developer <span className="mx-1">• GSoC'25 @OpenAFS</span>
+                  Backend Developer <span className="mx-1">• GSoC'25 @OpenAFS</span>
                 </p>
               </div>
             </div>
@@ -46,18 +44,18 @@ export default function Home() {
 
           <div className="mt-5 space-y-4">
             <p className="text-base md:text-lg text-neutral-800 dark:text-neutral-200">
-              <span className="text-cyan-500 dark:text-cyan-400">*</span> passionate about <span className="text-cyan-500 dark:text-cyan-400">low-level kernel development</span> and <span className="text-cyan-500 dark:text-cyan-400">distributed systems</span>. currently working on <span className="text-cyan-500 dark:text-cyan-400">OpenAFS kernels</span> through GSoC 2025. i honestly suck at frontend, but give me the right <span className="text-cyan-500 dark:text-cyan-400">mood or deadline</span> and i'll craft any platform.
+              <span className="text-cyan-500 dark:text-cyan-400">*</span> Passionate about <span className="text-cyan-500 dark:text-cyan-400">low-level kernel development</span> and <span className="text-cyan-500 dark:text-cyan-400">distributed systems</span>. Currently working on <span className="text-cyan-500 dark:text-cyan-400">OpenAFS kernels</span> through GSoC 2025. I honestly suck at frontend, but give me the right <span className="text-cyan-500 dark:text-cyan-400">mood or deadline</span> and I'll craft any platform.
             </p>
 
             <div className="flex flex-wrap gap-2 mt-2">
               <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
-                backend
+                Backend Dev
               </span>
               <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
-                kernels
+                Low Level System
               </span>
               <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
-                systems
+                Open Source
               </span>
               <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
                 GSoC
@@ -65,7 +63,7 @@ export default function Home() {
             </div>
 
             <a
-              href="/sushil-pandey-resume.pdf"
+              href="/resume/sushil.pdf"
               className="inline-flex items-center justify-center px-3 py-2 bg-neutral-100 dark:bg-neutral-800/30 text-neutral-800 dark:text-neutral-200 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700/50 transition-colors font-medium"
               target="_blank"
               rel="noopener noreferrer"
@@ -76,11 +74,11 @@ export default function Home() {
             </a>
 
             <Link
-              href={'https://cal.com/sushil-pandey/30min'}
+              href={'https://cal.com/contactsushil'}
               target="_blank"
               className={`pl-4 text-lg md:text-xl hover:underline ${geistMono.className}`}
             >
-              schedule a call
+              Call
             </Link>
           </div>
         </div>

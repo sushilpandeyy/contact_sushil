@@ -35,21 +35,21 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'curlbaby',
-    title: "cUrlBaby - CLI API Suite",
-    description: "A lightweight Java-based terminal utility for API testing that replicates core Postman features through a command-line interface, following object-oriented patterns for modular architecture. Implemented comprehensive HTTP operation support (GET, POST, PUT, DELETE) with built-in timeout control, error handling, and a custom JSON parser to format API responses clearly in the console.",
-    githubLink: "https://github.com/sushilpandeyy/curlbaby",
-    image: '/images/curlbaby.png',
-    tags: [
-      "Java",
-      "CLI",
-      "HTTP",
-      "API Testing",
-      "JSON Parser",
-      "Developer Tools",
-      "Terminal"
-    ],
-  },
+  "id": "curlbaby",
+  "title": "cUrlBaby - Java-Based CLI API Suite",
+  "description": "cUrlBaby is a lightweight command-line tool built in Java that enables developers to test APIs directly from the terminal. It was created to provide a fast and efficient alternative to GUI-based tools like Postman, especially in environments where developers prefer or are limited to the command line.\n\nThe tool supports core HTTP methods such as GET, POST, PUT, and DELETE. It includes customizable timeout settings and robust error handling to ensure reliability during API testing. One of its key features is a custom JSON parser that formats and displays API responses in a clean, readable structure within the terminal.\n\nDesigned with object-oriented principles, cUrlBaby offers a modular and maintainable codebase, making it easy to extend or customize for different use cases. It is ideal for backend developers, system administrators, and anyone working in server-side environments who needs a quick and dependable way to interact with APIs without leaving the terminal.\n\nWhether you're building, testing, or debugging APIs, cUrlBaby helps streamline the development workflow with clarity and speed. ['/photo/curlbaby1.png']",
+  "githubLink": "https://github.com/sushilpandeyy/curlbaby",
+  "video": "/video/curlbaby.mov",
+  "tags": [
+    "Java",
+    "CLI",
+    "HTTP",
+    "API Testing",
+    "JSON Parser",
+    "Developer Tools",
+    "Terminal"
+  ]
+},
   {
     id: 'qliq',
     title: "QliQ - Web3 Advertising Network",

@@ -71,9 +71,38 @@ export const ProjectCard = ({ project, isDetailed = false }: ProjectCardProps) =
       )}
 
       <div className="space-y-4">
-        <p className="text-lg leading-relaxed">
-          {project.longDescription || project.description}
-        </p>
+        {(project.longDescription || project.description)
+          .split('\n')
+          .map((line, idx) => {
+            const imageMatch = line.match(/^\[(?:'|")(.+)(?:'|")\]$/) || line.match(/^\[(.+)\]$/);
+            if (imageMatch) {
+              const srcs = imageMatch[1]
+                .split(',')
+                .map(src => src.replace(/^['"]|['"]$/g, '').trim());
+              return (
+                <div key={idx} className="flex flex-wrap gap-4 my-4">
+                  {srcs.map((src, i) => (
+                    <Image
+                      key={src}
+                      src={src}
+                      alt={`Project image ${i + 1}`}
+                      width={400}
+                      height={200}
+                      className="rounded-lg"
+                    />
+                  ))}
+                </div>
+              );
+            }
+            if (line.trim().length > 0) {
+              return (
+                <p key={idx} className="text-lg leading-relaxed">
+                  {line}
+                </p>
+              );
+            }
+            return null;
+          })}
 
         <div className="flex flex-wrap gap-4 pt-4">
           {project.liveLink && (

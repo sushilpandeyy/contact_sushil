@@ -16,7 +16,7 @@ export default function Experience() {
       description: `Selected for GSoC 2025 under the OpenAFS Foundation to contribute to performance improvements in AFS kernel module. 
         Implemented multi-page folio support to improve memory performance and I/O efficiency. 
         Developed testing and benchmarking tools across kernel versions, ensuring compatibility and performance gains.`,
-      href: "https://summerofcode.withgoogle.com/",
+      href: "https://summerofcode.withgoogle.com/programs/2025/projects/ChCleqd6",
       logoUrl: "/logo/gsoc.png",
     },
     {
@@ -27,8 +27,19 @@ export default function Experience() {
         backend components using Python-based technologies. 
         Engineered robust Python backend with Tornado framework, implementing disease prediction algorithms and personalized 
         insurance policy recommendation engines for the medical sector.`,
-      href: "https://myraa.tech/",
+      href: "https://myraa.com/",
       logoUrl: "/logo/myraa.jpeg",
+    },
+    {
+      company: "Freelance Projects",
+      position: "Software Developer",
+      duration: "Mar 2020 – Present",
+      description: `Architected and built a complete healthcare and insurance system (FlocHealth) from scratch, developing both frontend and 
+        backend components using Python-based technologies. 
+        Engineered robust Python backend with Tornado framework, implementing disease prediction algorithms and personalized 
+        insurance policy recommendation engines for the medical sector.`,
+      href: "mailto:contact.sushilpandey@gmail.com",
+      logoUrl: "/logo/sushil_git.jpeg",
     },
   ];
 
