@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
-import type { ContactForm, SocialLink } from '@/types'
+import type { ContactForm, SocialLink } from '../types'
 
 const contactInfo = [
   {

@@ -1,59 +1,9 @@
-// components/ThemeProvider.tsx
-'use client'
+"use client";
 
-import { createContext, useContext, useEffect, useState } from 'react'
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes";
 
-type Theme = 'light' | 'dark'
-
-interface ThemeContextType {
-  theme: Theme
-  toggleTheme: () => void
-}
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
-
-export function useTheme() {
-  const context = useContext(ThemeContext)
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider')
-  }
-  return context
-}
-
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light')
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-    const storedTheme = localStorage.getItem('theme') as Theme
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-    if (storedTheme) {
-      setTheme(storedTheme)
-    } else if (prefersDark) {
-      setTheme('dark')
-    }
-  }, [])
-
-  useEffect(() => {
-    if (mounted) {
-      localStorage.setItem('theme', theme)
-      document.documentElement.classList.toggle('dark', theme === 'dark')
-    }
-  }, [theme, mounted])
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light')
-  }
-
-  if (!mounted) {
-    return <div className="animate-pulse bg-gray-100 dark:bg-gray-900 min-h-screen" />
-  }
-
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  )
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }

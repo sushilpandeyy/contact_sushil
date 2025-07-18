@@ -2,140 +2,122 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
-import type { SocialLink } from '@/types'
-
-const socialLinks: SocialLink[] = [
-  { name: 'GitHub', url: 'https://github.com/yourusername', icon: Github },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/yourprofile', icon: Linkedin },
-  { name: 'Email', url: 'mailto:your.email@example.com', icon: Mail },
-]
+import { ArrowDown } from 'lucide-react'
 
 export default function Hero() {
-  const scrollToAbout = () => {
-    const aboutSection = document.querySelector('#about')
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' })
+  const scrollToExperience = () => {
+    const experienceSection = document.querySelector('#experience')
+    if (experienceSection) {
+      experienceSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-900 dark:to-primary-900/20" />
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(5)].map((_, i) => (
+    <section className="min-h-screen flex items-center justify-center relative bg-black pt-16">
+      <div className="container px-6">
+        <div className="text-center max-w-4xl mx-auto">
+          {/* Large Avatar/Logo - matching reference size */}
           <motion.div
-            key={i}
-            className="absolute rounded-full bg-primary-200/30 dark:bg-primary-800/20"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: `${Math.random() * 300 + 100}px`,
-              height: `${Math.random() * 300 + 100}px`,
-            }}
-            animate={{
-              x: [0, Math.random() * 100 - 50],
-              y: [0, Math.random() * 100 - 50],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              repeatType: 'reverse',
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container relative z-10">
-        <div className="text-center">
-          {/* Profile Image Placeholder */}
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white text-4xl font-bold shadow-xl"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-32 h-32 mx-auto mb-16 rounded-full bg-gray-800 border-2 border-gray-700 flex items-center justify-center shadow-2xl"
           >
-            YN
+            <span className="text-4xl text-white">✈</span>
           </motion.div>
 
-          {/* Main heading */}
+          {/* Main Title - larger and more prominent */}
           <motion.h1
-            initial={{ y: 50, opacity: 0 }}
+            initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="heading-1 mb-6"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-6xl md:text-7xl font-semibold text-white mb-8 tracking-tight leading-none"
           >
-            Hi, I'm{' '}
-            <span className="text-gradient">Your Name</span>
+            Your Name
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - matching reference style */}
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-xl text-gray-400 mb-8 font-medium"
           >
-            Full-stack developer crafting digital experiences with clean code and modern design
+            engineer • developer
           </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-          >
-            <button className="btn-primary">
-              View My Work
-            </button>
-            <button className="btn-secondary">
-              Download CV
-            </button>
-          </motion.div>
-
-          {/* Social Links */}
+          {/* Description - matching reference layout and colors */}
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex justify-center space-x-6 mb-16"
+            className="text-lg text-gray-500 mb-16 max-w-3xl mx-auto leading-relaxed"
           >
-            {socialLinks.map((link, index) => (
-              <motion.a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow duration-200"
-                aria-label={link.name}
-              >
-                <link.icon className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-              </motion.a>
-            ))}
+            <p>
+              ✨ I love building{' '}
+              <span className="text-blue-400 font-medium">products</span> that solve real problems. crafting{' '}
+              <span className="text-blue-400 font-medium">websites</span> and{' '}
+              <span className="text-blue-400 font-medium">apps</span> for the
+            </p>
+            <p className="mt-1">
+              past year, with a focus on <span className="text-blue-400 font-medium">user experience</span> and clean code.
+            </p>
           </motion.div>
 
-          {/* Scroll indicator */}
-          <motion.button
-            onClick={scrollToAbout}
+          {/* Tags - matching reference styling */}
+          <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-200"
+            className="flex flex-wrap justify-center gap-4 mb-16"
+          >
+            <span className="px-5 py-2.5 bg-gray-900 text-gray-300 text-sm rounded-full border border-gray-700 hover:bg-gray-800 transition-colors">
+              full-stack
+            </span>
+            <span className="px-5 py-2.5 bg-gray-900 text-gray-300 text-sm rounded-full border border-gray-700 hover:bg-gray-800 transition-colors">
+              ai
+            </span>
+            <span className="px-5 py-2.5 bg-gray-900 text-gray-300 text-sm rounded-full border border-gray-700 hover:bg-gray-800 transition-colors">
+              ui/ux
+            </span>
+          </motion.div>
+
+          {/* CTA Buttons - matching reference design */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-24"
+          >
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-8 py-3.5 bg-gray-900 text-white text-sm font-medium rounded-lg border border-gray-700 hover:bg-gray-800 hover:border-gray-600 transition-all duration-200"
+            >
+              View CV
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-8 py-3.5 bg-white text-black text-sm font-medium rounded-lg hover:bg-gray-100 transition-all duration-200"
+            >
+              book a meet
+            </motion.button>
+          </motion.div>
+
+          {/* Scroll indicator - positioned like reference */}
+          <motion.button
+            onClick={scrollToExperience}
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 p-4 rounded-full bg-gray-900 border border-gray-700 hover:bg-gray-800 transition-colors"
           >
             <motion.div
-              animate={{ y: [0, 5, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={{ y: [0, 4, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <ArrowDown size={20} className="text-gray-600 dark:text-gray-400" />
+              <ArrowDown size={18} className="text-gray-400" />
             </motion.div>
           </motion.button>
         </div>

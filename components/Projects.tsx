@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ExternalLink, Github, Image as ImageIcon } from 'lucide-react'
-import type { Project } from '@/types'
+import type { Project } from '../types'
 
 const projects: Project[] = [
   {
