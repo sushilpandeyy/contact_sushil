@@ -18,7 +18,7 @@ export default function Reach() {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Andhra Pradesh, India',
+      value: 'Hyderabad, India',
       href: null,
     },
   ];

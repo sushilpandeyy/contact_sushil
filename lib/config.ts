@@ -72,9 +72,9 @@ export const metadataConfig = {
     creator: '@sushilpandeyy',
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/photo/sushil_git.jpeg',
+    shortcut: '/photo/sushil_git.jpeg',
+    apple: '/photo/sushil_git.jpeg',
   },
   robots: {
     index: true,

@@ -28,51 +28,30 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/40">
-        <div className="max-w-3xl mx-auto px-6 py-4">
-          <nav className="flex items-center justify-between">
-            <Link href="/" className={`text-xl font-semibold ${geistMono.className}`}>
-              Sushil Pandey
-            </Link>
-            <div className="flex items-center gap-6">
-              <Link href="/projects" className="text-sm md:text-base hover:text-primary transition-colors">
-                projects
-              </Link>
-              <Link href="https://medium.com/@contactsushil" className="text-sm md:text-base hover:text-primary transition-colors">
-                blogs
-              </Link>
-              <ModeToggle />
-            </div>
-          </nav>
+    <div className="min-h-screen">
+      <OnekoCat />
+      <div className="flex flex-col items-start px-6 md:px-12 pt-4 md:pt-6 space-y-8 md:space-y-12 max-w-3xl w-full mx-auto">
+        <div className="w-full flex justify-end items-center gap-4">
+          <Link href={"/projects"} className="text-md md:text-lg hover:underline">
+            projects
+          </Link>
+          <Link href={"/blogs"} className="text-md md:text-lg hover:underline">
+            blogs
+          </Link>
+          <ModeToggle />
         </div>
-      </header>
 
-      {/* Hero Section */}
-      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20">
-        <div className="space-y-8">
-          {/* Main Title */}
-          <div className="space-y-6">
+        <div>
+          <div className="flex items-center gap-6 mb-4">
             <div>
               <h1 className={`text-4xl md:text-5xl font-semibold tracking-tight text-foreground ${geistMono.className}`}>
                 Sushil Pandey
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mt-2">
-                Backend Developer • GSoC'25 @OpenAFS
-              </p>
-            </div>
-
-            {/* Description */}
-            <div className="max-w-2xl">
-              <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                <span className="text-cyan-500 dark:text-cyan-400">*</span> Passionate about{" "}
-                <span className="text-cyan-500 dark:text-cyan-400 font-medium">low-level kernel development</span> and{" "}
-                <span className="text-cyan-500 dark:text-cyan-400 font-medium">distributed systems</span>. Currently working on{" "}
-                <span className="text-cyan-500 dark:text-cyan-400 font-medium">OpenAFS kernels</span> through GSoC 2025. 
-                I honestly suck at frontend, but give me the right{" "}
-                <span className="text-cyan-500 dark:text-cyan-400 font-medium">mood or deadline</span> and I'll craft any platform.
-              </p>
+              <div className="flex items-center gap-2 mt-2">
+                <p className="text-sm md:text-md text-neutral-600 dark:text-neutral-400">
+                  backend developer <span className="mx-1">• GSoC'25 @OpenAFS</span>
+                </p>
+              </div>
             </div>
 
             {/* Skills */}
@@ -89,49 +68,43 @@ export default function Home() {
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="gap-2 font-medium" asChild>
-                <a href="/resume/sushil.pdf" target="_blank" rel="noopener noreferrer">
-                  <Download className="h-4 w-4" />
-                  View Resume
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2 font-medium" asChild>
-                <Link href="https://cal.com/contactsushil" target="_blank">
-                  <Calendar className="h-4 w-4" />
-                  Schedule a Call
-                </Link>
-              </Button>
+          <div className="mt-5 space-y-4">
+            <p className="text-base md:text-lg text-neutral-800 dark:text-neutral-200">
+              <span className="text-cyan-500 dark:text-cyan-400">*</span> passionate about <span className="text-cyan-500 dark:text-cyan-400">low-level kernel development</span> and <span className="text-cyan-500 dark:text-cyan-400">distributed systems</span>. currently working on <span className="text-cyan-500 dark:text-cyan-400">OpenAFS kernels</span> through GSoC 2025. i honestly suck at frontend, but give me the right <span className="text-cyan-500 dark:text-cyan-400">mood or deadline</span> and i'll craft any platform.
+            </p>
+
+            <div className="flex flex-wrap gap-2 mt-2">
+              <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
+                backend
+              </span>
+              <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
+                kernels
+              </span>
+              <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
+                systems
+              </span>
+              <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base">
+                GSoC
+              </span>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Experience Section */}
-      <section className="max-w-3xl mx-auto px-6 py-16">
-        <div className="space-y-8">
-          <h2 className={`text-2xl md:text-3xl font-semibold ${geistMono.className}`}>
-            Experience
-          </h2>
-          <div className="space-y-6">
-            <Experience />
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="max-w-3xl mx-auto px-6 py-16">
-        <div className="space-y-8">
-          <div className="flex items-center justify-between">
-            <h2 className={`text-2xl md:text-3xl font-semibold ${geistMono.className}`}>
-              Featured Work
-            </h2>
-            <Link
-              href="/projects"
-              className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+            <a
+              href="/sushil-pandey-resume.pdf"
+              className="inline-flex items-center justify-center px-3 py-2 bg-neutral-100 dark:bg-neutral-800/30 text-neutral-800 dark:text-neutral-200 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700/50 transition-colors font-medium"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              View all <ExternalLink className="h-3 w-3" />
+              <div className={`flex items-center text-sm lg:text-base`}>
+                <span>View Resume</span>
+              </div>
+            </a>
+
+            <Link
+              href={'https://cal.com/sushil-pandey/30min'}
+              target="_blank"
+              className={`pl-4 text-lg md:text-xl hover:underline ${geistMono.className}`}
+            >
+              schedule a call
             </Link>
           </div>
           
