@@ -3,6 +3,9 @@ import { FaGithub } from "react-icons/fa6";
 import { FiArrowUpRight } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 interface ProjectCardProps {
   project: Project;
@@ -13,120 +16,141 @@ export const ProjectCard = ({ project, isDetailed = false }: ProjectCardProps) =
   if (!isDetailed) {
     return (
       <Link href={`/projects/${project.id}`}>
-        <div className="hover:underline py-2 text-lg md:text-xl pb-5 border-b border-neutral-600 dark:border-neutral-500">
-          {project.title}
+        <div className="group py-3 border-b border-border/30 hover:border-border transition-all duration-200">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg md:text-xl font-medium text-foreground group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">
+              {project.title}
+            </h3>
+            <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
         </div>
       </Link>
     );
   }
 
   return (
-    <article className="prose prose-neutral dark:prose-invert prose-headings:font-medium max-w-none">
-      <header className="not-prose mb-8">
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl md:text-4xl font-medium">{project.title}</h1>
-          <div className="flex items-center gap-4">
+    <article className="space-y-8">
+      {/* Header */}
+      <header className="space-y-6">
+        <div className="flex items-start justify-between">
+          <h1 className="text-2xl md:text-4xl font-medium text-foreground flex-1">
+            {project.title}
+          </h1>
+          <div className="flex items-center gap-2 ml-6">
             {project.liveLink && (
-              <Link href={project.liveLink} target="_blank" className="bg-neutral-200 dark:bg-neutral-800 p-2 rounded-full hover:opacity-70">
-                <FiArrowUpRight className="size-5 md:size-6" />
+              <Link 
+                href={project.liveLink} 
+                target="_blank"
+                className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+              >
+                <FiArrowUpRight className="w-5 h-5 text-muted-foreground" />
               </Link>
             )}
             {project.githubLink && (
-              <Link href={project.githubLink} target="_blank" className="bg-neutral-200 dark:bg-neutral-800 p-2 rounded-full hover:opacity-70">
-                <FaGithub className="size-5 md:size-6" />
+              <Link 
+                href={project.githubLink} 
+                target="_blank"
+                className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+              >
+                <FaGithub className="w-5 h-5 text-muted-foreground" />
               </Link>
             )}
           </div>
         </div>
-        <div className="flex flex-wrap gap-2 mb-6">
+        
+        <div className="flex flex-wrap gap-2">
           {project.tags.map(tag => (
-            <span key={tag} className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-full text-xs">
+            <Badge key={tag} variant="secondary" className="text-xs">
               {tag}
-            </span>
+            </Badge>
           ))}
         </div>
       </header>
 
-      {project.video ? (
-        <div className="mb-8">
-          <video
-            controls
-            className="w-full rounded-lg"
-            poster={project.image}
-          >
-            <source src={project.video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      ) : project.image && (
-        <div className="mb-8">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={800}
-            height={400}
-            className="w-full rounded-lg"
-          />
+      {/* Media */}
+      {(project.video || project.image) && (
+        <div className="rounded-lg overflow-hidden border border-border/50">
+          {project.video ? (
+            <video
+              controls
+              className="w-full aspect-video"
+              poster={project.image}
+            >
+              <source src={project.video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : project.image && (
+            <div className="aspect-video relative">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
         </div>
       )}
 
-      <div className="space-y-4">
-        {(project.longDescription || project.description)
-          .split('\n')
-          .map((line, idx) => {
-            const imageMatch = line.match(/^\[(?:'|")(.+)(?:'|")\]$/) || line.match(/^\[(.+)\]$/);
-            if (imageMatch) {
-              const srcs = imageMatch[1]
-                .split(',')
-                .map(src => src.replace(/^['"]|['"]$/g, '').trim());
-              return (
-                <div key={idx} className="flex flex-wrap gap-4 my-4">
-                  {srcs.map((src, i) => (
-                    <Image
-                      key={src}
-                      src={src}
-                      alt={`Project image ${i + 1}`}
-                      width={400}
-                      height={200}
-                      className="rounded-lg"
-                    />
-                  ))}
-                </div>
-              );
-            }
-            if (line.trim().length > 0) {
-              return (
-                <p key={idx} className="text-lg leading-relaxed">
-                  {line}
-                </p>
-              );
-            }
-            return null;
-          })}
-
-        <div className="flex flex-wrap gap-4 pt-4">
-          {project.liveLink && (
-            <Link
-              href={project.liveLink}
-              target="_blank"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-black rounded-md hover:opacity-90 transition-opacity"
-            >
-              <FiArrowUpRight className="size-4" />
-              Live Demo
-            </Link>
-          )}
-          {project.githubLink && (
-            <Link
-              href={project.githubLink}
-              target="_blank"
-              className="inline-flex items-center gap-2 px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
-            >
-              <FaGithub className="size-4" />
-              View Code
-            </Link>
-          )}
+      {/* Content */}
+      <div className="prose prose-neutral dark:prose-invert max-w-none">
+        <div className="space-y-4">
+          {(project.longDescription || project.description)
+            .split('\n')
+            .map((line, idx) => {
+              const imageMatch = line.match(/^\[(?:'|")(.+)(?:'|")\]$/) || line.match(/^\[(.+)\]$/);
+              if (imageMatch) {
+                const srcs = imageMatch[1]
+                  .split(',')
+                  .map(src => src.replace(/^['"]|['"]$/g, '').trim());
+                return (
+                  <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                    {srcs.map((src, i) => (
+                      <div key={src} className="aspect-video relative rounded-lg overflow-hidden border border-border/50">
+                        <Image
+                          src={src}
+                          alt={`Project image ${i + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              if (line.trim().length > 0) {
+                return (
+                  <p key={idx} className="text-base leading-relaxed text-muted-foreground">
+                    {line}
+                  </p>
+                );
+              }
+              return null;
+            })}
         </div>
       </div>
+
+      {/* Actions */}
+      {(project.liveLink || project.githubLink) && (
+        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          {project.liveLink && (
+            <Button size="lg" className="gap-2" asChild>
+              <Link href={project.liveLink} target="_blank">
+                <FiArrowUpRight className="w-4 h-4" />
+                Live Demo
+              </Link>
+            </Button>
+          )}
+          {project.githubLink && (
+            <Button size="lg" variant="outline" className="gap-2" asChild>
+              <Link href={project.githubLink} target="_blank">
+                <FaGithub className="w-4 h-4" />
+                View Code
+              </Link>
+            </Button>
+          )}
+        </div>
+      )}
     </article>
   );
 };
