@@ -1,3 +1,5 @@
+import { ExternalLink } from "lucide-react";
+
 interface ExperienceItem {
   company: string;
   position: string;
@@ -33,54 +35,67 @@ export default function Experience() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {experiences.map((exp, index) => (
-        <div key={exp.company} className="flex items-center justify-between group">
-          {/* Left side - Logo and Text */}
-          <div className="flex items-center gap-4">
-            {/* Logo */}
-            <div className="w-12 h-12 rounded-full bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center shrink-0 overflow-hidden">
-              {exp.logoUrl ? (
-                <img
-                  src={exp.logoUrl}
-                  alt={exp.company}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-neutral-300 dark:bg-neutral-600 rounded-full flex items-center justify-center">
-                  <span className="text-lg font-bold text-neutral-600 dark:text-neutral-400">
-                    {exp.company.charAt(0)}
-                  </span>
-                </div>
-              )}
+        <div 
+          key={exp.company} 
+          className="group border border-border/50 rounded-lg p-6 hover:border-border hover:shadow-sm transition-all duration-300 bg-card"
+        >
+          {/* Header with Logo, Company, and Duration */}
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center gap-4">
+              {/* Logo */}
+              <div className="w-12 h-12 rounded-full bg-background border border-border flex items-center justify-center shrink-0 overflow-hidden">
+                {exp.logoUrl ? (
+                  <img
+                    src={exp.logoUrl}
+                    alt={exp.company}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted rounded-full flex items-center justify-center">
+                    <span className="text-lg font-bold text-muted-foreground">
+                      {exp.company.charAt(0)}
+                    </span>
+                  </div>
+                )}
+              </div>
+              
+              {/* Company and Position */}
+              <div>
+                {exp.href ? (
+                  <a
+                    href={exp.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-foreground hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors flex items-center gap-2 group/link"
+                  >
+                    {exp.company}
+                    <ExternalLink className="h-4 w-4 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                  </a>
+                ) : (
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {exp.company}
+                  </h3>
+                )}
+                <p className="text-base text-muted-foreground mt-1 font-medium">
+                  {exp.position}
+                </p>
+              </div>
             </div>
             
-            {/* Company and Position */}
-            <div>
-              {exp.href ? (
-                <a
-                  href={exp.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xl font-medium text-neutral-900 dark:text-neutral-100 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"
-                >
-                  {exp.company}
-                </a>
-              ) : (
-                <h3 className="text-xl font-medium text-neutral-900 dark:text-neutral-100">
-                  {exp.company}
-                </h3>
-              )}
-              <p className="text-base text-neutral-600 dark:text-neutral-400 mt-1">
-                {exp.position}
+            {/* Duration */}
+            <div className="px-3 py-1 bg-muted/50 rounded-full border border-border/30">
+              <p className="text-sm text-muted-foreground font-medium whitespace-nowrap">
+                {exp.duration}
               </p>
             </div>
           </div>
           
-          {/* Right side - Duration */}
-          <div className="text-right">
-            <p className="text-base text-neutral-500 dark:text-neutral-500 whitespace-nowrap">
-              {exp.duration}
+          {/* Description */}
+          <div className="ml-16">
+            <p className="text-muted-foreground leading-relaxed">
+              {exp.description}
             </p>
           </div>
         </div>
