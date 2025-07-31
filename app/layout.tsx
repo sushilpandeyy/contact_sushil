@@ -3,7 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
-import Analytics from "components/Analytics";
+import Analytics from "../components/Analytics";
 
 const inter = Inter_Tight({
   weight: '400',
