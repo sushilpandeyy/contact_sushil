@@ -56,9 +56,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Initialize ClickChutney analytics
-  ClickChutney.init('cc_1agw95o65ug');
-  ClickChutney.page();
+  ClickChutney.init('cc_1753959726928_5rbzqcjdql6');
+ClickChutney.page();
 
   return (
     <html lang="en" suppressHydrationWarning>
