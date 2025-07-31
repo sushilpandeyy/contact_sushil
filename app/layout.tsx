@@ -3,6 +3,8 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
+import ClickChutney from '@click-chutney/analytics';
+
 
 const inter = Inter_Tight({
   weight: '400',
@@ -54,6 +56,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Initialize ClickChutney analytics
+  ClickChutney.init('cc_gv333udwnga');
+  ClickChutney.page();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
