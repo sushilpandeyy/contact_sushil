@@ -67,7 +67,7 @@ export default function RootLayout({
         >
           <div className="relative z-10">
             {children}
-            <Analytics />
+           <Analytics />
           </div>
         </ThemeProvider>
         <Footer/>
