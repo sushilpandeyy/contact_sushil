@@ -4,7 +4,7 @@ import ClickChutney from '@click-chutney/analytics'
 
 export default function Analytics() {
   useEffect(() => {
-    ClickChutney.init('cc_1753962840054_9d7rrctqzjb')
+    ClickChutney.init('cc_1753975111304_wvrbl479yc')
     ClickChutney.page()
   }, [])
   return null
