@@ -57,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // Initialize ClickChutney analytics
-  ClickChutney.init('cc_gv333udwnga');
+  ClickChutney.init('cc_jz6rffbw7mi');
   ClickChutney.page();
 
   return (
