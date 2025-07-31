@@ -3,8 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
-import ClickChutney from '@click-chutney/analytics';
-
+import Analytics from "components/Analytics";
 
 const inter = Inter_Tight({
   weight: '400',
@@ -56,8 +55,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  ClickChutney.init('cc_1753960024262_po7v5payy3c');
-  ClickChutney.page();
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -70,6 +67,7 @@ export default function RootLayout({
         >
           <div className="relative z-10">
             {children}
+            <Analytics />
           </div>
         </ThemeProvider>
         <Footer/>
