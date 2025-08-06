@@ -3,7 +3,9 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
-import Analytics from "../components/Analytics";
+import dynamic from 'next/dynamic';
+import { Analytics } from '@click-chutney/analytics/react';
+
 
 const inter = Inter_Tight({
   weight: '400',
@@ -67,7 +69,7 @@ export default function RootLayout({
         >
           <div className="relative z-10">
             {children}
-           <Analytics />
+            <Analytics />
           </div>
         </ThemeProvider>
         <Footer/>
