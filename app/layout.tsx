@@ -69,7 +69,7 @@ export default function RootLayout({
           <div className="relative z-10">
             {children}
           </div>
-          <Analytics trackingId="cc_1754546187527_5j6wekrbyoi" />
+         <Analytics trackingId="cc_1754548314876_22zhnjp918y" />
         </ThemeProvider>
         <Footer/>
       </body>
