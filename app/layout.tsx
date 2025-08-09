@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
 import dynamic from 'next/dynamic';
-import ClickChutney from '@click-chutney/analytics';
+import { Analytics } from '@click-chutney/clickanalytics/react';
 
 
 const inter = Inter_Tight({
@@ -57,9 +57,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Initialize ClickChutney analytics
-  ClickChutney.init('G-YMBD2AFTFP');
-  
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
@@ -74,6 +71,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Footer/>
+        <Analytics trackingId="G-YMBD2AFTFP" />
       </body>
     </html>
   );
