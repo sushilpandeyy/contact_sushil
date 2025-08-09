@@ -4,8 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
 import dynamic from 'next/dynamic';
-import { Analytics } from '@click-chutney/clickanalytics/react';
-
+import { Analytics } from 'clickchutney-analytics/dist/react'
 
 const inter = Inter_Tight({
   weight: '400',
@@ -71,7 +70,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Footer/>
-        <Analytics trackingId="G-YMBD2AFTFP" />
+        <Analytics />
       </body>
     </html>
   );
