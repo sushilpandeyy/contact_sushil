@@ -70,7 +70,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Footer/>
-        <Analytics />
+       <Analytics trackingId="cc_28449092bb82f0b1" />
       </body>
     </html>
   );
