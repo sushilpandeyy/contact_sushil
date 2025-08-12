@@ -70,7 +70,11 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Footer/>
-       <Analytics trackingId="cc_imBb9uVKZxFn" />
+       <Analytics 
+          trackingId="cc_imBb9uVKZxFn"
+          debug={process.env.NODE_ENV === 'development'}
+        />
+
       </body>
     </html>
   );
