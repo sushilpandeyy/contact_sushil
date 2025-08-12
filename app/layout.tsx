@@ -71,7 +71,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Footer/>
        <Analytics 
-          trackingId="cc_imBb9uVKZxFn"
+          trackingId="cc_vV1qLjlLyGEJ"
           debug={process.env.NODE_ENV === 'development'}
         />
 
