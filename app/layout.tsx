@@ -5,6 +5,7 @@ import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
 import dynamic from 'next/dynamic';
 import { Analytics } from 'clickchutney-analytics/dist/react'
+import AnalyticsProvider from '../components/AnalyticsProvider';
 
 const inter = Inter_Tight({
   weight: '400',
@@ -66,14 +67,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative z-10">
-            {children}
+           <AnalyticsProvider>
+          {children}
+        </AnalyticsProvider>
           </div>
         </ThemeProvider>
         <Footer/>
-       <Analytics 
-          trackingId="cc_vV1qLjlLyGEJ"
-          debug={process.env.NODE_ENV === 'development'}
-        />
+
 
       </body>
     </html>
