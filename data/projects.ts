@@ -2,6 +2,24 @@ import { Project } from '../types/project';
 
 export const projects: Project[] = [
   {
+  "id": "clickchutney",
+  "title": "ClickChutney - Simple, Smart, and Privacy-First Analytics",
+  "description": "ClickChutney is a modern analytics platform designed to give businesses and creators clear, actionable insights without the clutter of traditional tools. Built for simplicity and speed, it helps users track website traffic, visitor behavior, and engagement in real time. With an intuitive dashboard, privacy-first approach, and a sleek design, ClickChutney makes analytics accessible to indie developers, startups, and agencies alike.\n\nInstead of overwhelming users with complex graphs and jargon, ClickChutney focuses on what truly matters—page views, unique visitors, bounce rates, and user interactions. Whether you’re a content creator measuring blog performance, a startup monitoring user sign-ups, or an agency managing multiple client sites, ClickChutney delivers analytics that are easy to understand and act on.\n\nClickChutney is more than just numbers—it’s about empowering users to make smarter decisions with clean, real-time data while ensuring privacy and control remain in their hands.",
+  "githubLink": "https://github.com/sushilpandeyy/Click-Chutney",
+  "image": "/photo/clickchutney.png",
+  "tags": [
+    "Next.js",
+    "TypeScript",
+    "MongoDB",
+    "Prisma",
+    "Better Auth",
+    "Analytics",
+    "Real-time",
+    "Privacy-First",
+    "Dashboard"
+  ]
+},
+  {
   "id": "korosuke",
   "title": "Korosuke - Security-Preserving Retrieval Framework",
   "description": "Korosuke is a research-backed framework built to tackle the growing need for secure and efficient knowledge retrieval in enterprise and organizational environments. The core problem it solves is enabling semantic search while preserving strict access control over sensitive information.\n\nBuilt using Python, Korosuke introduces a unique method for creating hierarchical security-aware embeddings. These embeddings are capable of enforcing access policies directly within the vector space, ensuring that users only retrieve information they are authorized to access—even during complex semantic queries.\n\nWhat sets Korosuke apart is its adaptive re-ranking mechanism, which intelligently adjusts search results based on a novel utility function that balances relevance with information confidentiality. This ensures that sensitive but irrelevant results are filtered out without sacrificing the accuracy or depth of the search.\n\nThe framework is especially useful for enterprise knowledge systems, secure document repositories, and regulated industries where access compliance and intelligent retrieval go hand in hand.\n\nKorosuke was awarded a Gold Medal for its innovation and research excellence, and its underlying techniques are grounded in advanced information retrieval, access control theory, and applied machine learning. The framework not only contributes academically but also offers practical tools for building secure, intelligent enterprise search systems.",
@@ -19,6 +37,22 @@ export const projects: Project[] = [
     "Privacy-Preserving Systems"
   ]
 },
+{
+  "id": "curlbaby",
+  "title": "cUrlBaby - Java-Based CLI API Suite",
+  "description": "cUrlBaby is a lightweight command-line tool built in Java that enables developers to test APIs directly from the terminal. It was created to provide a fast and efficient alternative to GUI-based tools like Postman, especially in environments where developers prefer or are limited to the command line.\n\nThe tool supports core HTTP methods such as GET, POST, PUT, and DELETE. It includes customizable timeout settings and robust error handling to ensure reliability during API testing. One of its key features is a custom JSON parser that formats and displays API responses in a clean, readable structure within the terminal.\n\nDesigned with object-oriented principles, cUrlBaby offers a modular and maintainable codebase, making it easy to extend or customize for different use cases. It is ideal for backend developers, system administrators, and anyone working in server-side environments who needs a quick and dependable way to interact with APIs without leaving the terminal.\n\nWhether you're building, testing, or debugging APIs, cUrlBaby helps streamline the development workflow with clarity and speed. ['/photo/curlbaby1.png']",
+  "githubLink": "https://github.com/sushilpandeyy/curlbaby",
+  "video": "/video/curlbaby.mov",
+  "tags": [
+    "Java",
+    "CLI",
+    "HTTP",
+    "API Testing",
+    "JSON Parser",
+    "Developer Tools",
+    "Terminal"
+  ]
+},
   {
   "id": "nyxapi",
   "title": "NyxAPI - Mock API Generator",
@@ -34,20 +68,18 @@ export const projects: Project[] = [
     "Developer Tools"
   ]
 },
-  {
-  "id": "curlbaby",
-  "title": "cUrlBaby - Java-Based CLI API Suite",
-  "description": "cUrlBaby is a lightweight command-line tool built in Java that enables developers to test APIs directly from the terminal. It was created to provide a fast and efficient alternative to GUI-based tools like Postman, especially in environments where developers prefer or are limited to the command line.\n\nThe tool supports core HTTP methods such as GET, POST, PUT, and DELETE. It includes customizable timeout settings and robust error handling to ensure reliability during API testing. One of its key features is a custom JSON parser that formats and displays API responses in a clean, readable structure within the terminal.\n\nDesigned with object-oriented principles, cUrlBaby offers a modular and maintainable codebase, making it easy to extend or customize for different use cases. It is ideal for backend developers, system administrators, and anyone working in server-side environments who needs a quick and dependable way to interact with APIs without leaving the terminal.\n\nWhether you're building, testing, or debugging APIs, cUrlBaby helps streamline the development workflow with clarity and speed. ['/photo/curlbaby1.png']",
-  "githubLink": "https://github.com/sushilpandeyy/curlbaby",
-  "video": "/video/curlbaby.mov",
+{
+  "id": "everydukan",
+  "title": "EveryDukan - All Deals. One App.",
+  "description": "In today’s fast-paced shopping landscape, customers often find themselves juggling multiple apps, websites, and platforms to discover the best deals and offers. This creates unnecessary complexity and frustration, as people miss out on savings or waste time searching through countless sources.\n\nEveryDukan solves this problem by bringing everything into one seamless platform. It is a modern all-in-one shopping application where users can instantly browse, compare, and unlock deals from multiple stores without the hassle of switching between apps. From fashion and electronics to groceries and daily essentials, EveryDukan ensures that users never miss out on the best discounts and offers available.\n\nThe platform is designed with performance and scalability in mind. The mobile application is built with Flutter, delivering a smooth, cross-platform shopping experience. Its backend is powered by AWS Lambda serverless functions, ensuring reliability and cost-efficient scalability. The admin and analytics dashboard, built with Next.js, provides real-time insights and controls, all connected through a MongoDB-powered data layer. Together, this tech stack makes EveryDukan robust, user-friendly, and future-ready.\n\nEveryDukan isn’t just another shopping app—it’s a smart shopping companion designed to maximize savings and simplify decision-making. With a clean interface, real-time updates, and comprehensive coverage of deals across categories, EveryDukan is redefining how people shop online.",
+  "githubLink": "https://github.com/sushilpandeyy/EveryDukan",
+  "image": "/photo/everydukan.png",
   "tags": [
-    "Java",
-    "CLI",
-    "HTTP",
-    "API Testing",
-    "JSON Parser",
-    "Developer Tools",
-    "Terminal"
+    "Flutter",
+    "AWS Lambda",
+    "Next.js",
+    "MongoDB",
+    "Serverless"
   ]
 },
   {
