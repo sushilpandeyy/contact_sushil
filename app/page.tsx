@@ -20,9 +20,9 @@ const geistMono = Geist({
 
 export default function Home() {
   const skills = [
-    { name: "Backend Dev", icon: Server },
-    { name: "Kernel Programming", icon: Code },
     { name: "Distributed Systems", icon: Database },
+    { name: "Backend & Infra", icon: Server },
+    { name: "AI / LLM Systems", icon: Code },
     { name: "GSoC'25", icon: ExternalLink },
     { name: "Open Source", icon: Github },
   ];
@@ -58,21 +58,22 @@ export default function Home() {
           Sushil Pandey
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground">
-          Backend Developer • GSoC'25 @OpenAFS
+          SDE Intern @Edra Labs • GSoC'25 @OpenAFS
         </p>
       </div>
 
       {/* Description */}
       <div className="max-w-2xl space-y-4">
         <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-          <span className="text-cyan-500 dark:text-cyan-400">*</span> Passionate about{" "}
-          <span className="text-cyan-500 dark:text-cyan-400 font-medium">low-level kernel development</span> and{" "}
-          <span className="text-cyan-500 dark:text-cyan-400 font-medium">distributed systems</span>. Currently working on{" "}
-          <span className="text-cyan-500 dark:text-cyan-400 font-medium">OpenAFS kernels</span> through GSoC 2025.
+          <span className="text-cyan-500 dark:text-cyan-400">*</span> I build{" "}
+          <span className="text-cyan-500 dark:text-cyan-400 font-medium">distributed systems</span> and{" "}
+          <span className="text-cyan-500 dark:text-cyan-400 font-medium">AI-powered infrastructure</span> that scale — from{" "}
+          <span className="text-cyan-500 dark:text-cyan-400 font-medium">Linux kernels</span> upstreamed through GSoC 2025 to{" "}
+          <span className="text-cyan-500 dark:text-cyan-400 font-medium">large-scale compute platforms</span>.
         </p>
         <p className="text-sm md:text-base text-muted-foreground/80">
-          I honestly suck at frontend, but give me the right{" "}
-          <span className="text-cyan-500 dark:text-cyan-400 font-medium">mood or deadline</span> and I'll craft any platform.
+          Most at home deep in the backend, but give me the right{" "}
+          <span className="text-cyan-500 dark:text-cyan-400 font-medium">mood or deadline</span> and I'll craft any platform end to end.
         </p>
       </div>
     </div>

@@ -12,10 +12,17 @@ interface ExperienceItem {
 export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
+      company: "Edra Labs (BrowserStack)",
+      position: "Software Engineer (Internship)",
+      duration: "Jan 2026 – Present",
+      description: `Building scalable distributed systems and AI/LLM-powered engineering tooling for large-scale compute platforms, with a focus on performance, cost efficiency, and reliable infrastructure.`,
+      href: "https://www.linkedin.com/company/edra-labs/",
+    },
+    {
       company: "Google Summer of Code @ OpenAFS",
       position: "Contributing Developer",
-      duration: "May 2025 – Present",
-      description: `Selected for GSoC 2025 under the OpenAFS Foundation to contribute to performance improvements in AFS kernel module. Implemented multi-page folio support and developed testing tools across kernel versions.`,
+      duration: "May 2025 – Aug 2025",
+      description: `Selected for GSoC 2025 to optimize the OpenAFS distributed file system kernel module in C/C++. Engineered multi-page folio support for ~23% faster throughput and upstreamed patches migrating legacy memory APIs to the modern Linux folio model.`,
       href: "https://summerofcode.withgoogle.com/programs/2025/projects/ChCleqd6",
       logoUrl: "/logo/gsoc.png",
     },
@@ -23,17 +30,9 @@ export default function Experience() {
       company: "Myraa Technologies",
       position: "Full Stack Developer (Internship)",
       duration: "Oct 2023 – Jan 2024",
-      description: `Architected and built a complete healthcare and insurance system (FlocHealth) from scratch. Engineered robust Python backend with Tornado framework, implementing disease prediction algorithms.`,
+      description: `Built a full-stack healthcare management system in Python (Tornado) serving 500+ providers via REST APIs, backed by a Neo4j graph and MySQL. Shipped secure auth and CI/CD on AWS with Docker and GitHub Actions.`,
       href: "https://myraa.com/",
       logoUrl: "/logo/myraa.jpeg",
-    },
-    {
-      company: "Freelance Projects",
-      position: "Software Developer",
-      duration: "Mar 2020 – Present",
-      description: `Developed various full-stack applications and backend systems for clients. Built scalable solutions using modern technologies including Python, Node.js, and cloud platforms.`,
-      href: "mailto:contact.sushilpandey@gmail.com",
-      logoUrl: "/logo/sushil_git.jpeg",
     },
   ];
 
